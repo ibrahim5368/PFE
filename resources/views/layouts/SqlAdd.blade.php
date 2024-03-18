@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajout de Requêtes</title>
+    <title>Ajout des Requêtes</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 h-screen flex flex-col">
+<body class="bg-gray-100 h-screen  flex flex-col">
     <div class="flex-grow flex">
-        <aside class="bg-gray-800 text-white w-1/6 flex-shrink-0">
+        <aside  class="w-1/6 flex-shrink-0 bg-gray-800">
             <div class="flex flex-col justify-between h-full">
                 <ul class="space-y-2 px-4 py-4">
-                    <li><a href="#" class="text-xl hover:bg-gray-700">Insertion</a></li>
+                    <li><a href="/" class="bg-white text-xl hover:bg-gray-700">Insertion</a></li>
                 </ul>
-                <button class="logout-btn flex items-center p-2 m-4 rounded-md">
-    <img src="images/logout-02-stroke-rounded.jpg" alt="Logout Icon" class="w-6 h-6 mr-2">
-    <span>Logout</span>
+                <button class="text-white logout-btn flex items-center p-2 m-4 rounded-md">
+    <img src="images/logout-02-stroke-rounded.svg" alt="Logout Icon" class="w-6 bg-white h-6 mr-2">
+    <span class="text-lg font-semibold ">Logout</span>
 </button>
-
             </div>
         </aside>
-        <div class="container mx-auto bg-white p-6 rounded-lg shadow-md flex-grow">
+        <div class="container  bg-white p-6 rounded-lg shadow-md flex-grow">
+        <button href="export" class="right-0 mr-5  absolute rounded-md bg-blue-500 text-white py-2 px-4">export</button>
             <h4 class="text-lg font-semibold mb-4">Ajout de Requêtes</h4>
             <div class="form-container">
                 <form action="#" method="post">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <button type="submit"
-                        class="enregistrer-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full">Enregistrer</button>
+                        class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 ">Enregistrer</button>
                 </form>
             </div>
         </div>
