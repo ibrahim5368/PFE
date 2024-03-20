@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FormData extends Model
+class module extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'IdProjet',
-        'VersionProjet', 
-        'SQLRequetes'
-        ];
 }

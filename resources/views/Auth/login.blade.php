@@ -23,9 +23,8 @@
         <div class="text-center pb-8">
             <h1 class="text-3xl font-bold">Connexion</h1>
         </div>
-        <form method="POST" action="route{{ 'connecter' }} " >
+        <form method="POST" action="{{ route('login.action') }}">
             @csrf
-
             <div class="mb-6">
                 <label for="email" class="text-gray-700 font-bold mb-2 block">Adresse Email</label>
                 <input type="email" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:ring-1 @error('email') border-red-500 @enderror" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -50,7 +49,9 @@
                 <label class="inline-flex items-center">
                     <input type="checkbox" class="form-checkbox text-indigo-600" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <span class="ml-2 text-gray-700">Se souvenir de moi</span>
+                    
                 </label>
+
             </div>
 
             <div class="mb-6">
@@ -66,6 +67,9 @@
             @endif
 
         </form>
+        <div class="text-center">
+            <a class="small" href="{{route('register')}}">Create an Account!</a>
+        </div>
     </div>
 </div>
 </body>

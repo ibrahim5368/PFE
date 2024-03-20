@@ -15,18 +15,18 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// user
-Route::get('/', function () {
-    return view('user.login');
-})->name('viewlogin');
-Route::get('signup', function () {
-    return view('user.signup');
-});
-Route::post('login', [UserController::class, 'login'])->name('connecter');
 
-Route::post('signup', [UserController::class, 'store'])->name('signup');
-//sql
-Route::get('/export', [FormController::class, 'export'])->name('export');
-Route::get('sqladd', function () {
-    return view('layouts.SqlAdd');
-})->name('sqlform');
+
+
+////////////////////////auth/////////////////////////
+Route::post('register', [UserController::class, 'registerSave'])->name('register.save');
+Route::get('login', [UserController::class, 'login'])->name('login');
+Route::get('/', [UserController::class, 'register'])->name('register');
+Route::get('logout', [UserController::class, 'logout'])->middleware('auth')->name('logout');
+Route::get('sqladd', [UserController::class, 'sqladd'])->name('sqladd');
+Route::post('login',[UserController::class,'loginAction'])->name('login.action');
+///////////////////////form/////////////////////////////////
+Route::controller(FormController::class)->group(function(){
+    Route::get('export',  'export')->name('export');
+});
+

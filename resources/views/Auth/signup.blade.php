@@ -24,7 +24,7 @@
         <div class="text-center pb-8">
             <h1 class="py-8 text-3xl font-bold">S'inscrire</h1>
         </div>
-        <form method="POST" action="{{ route('signup') }}">
+        <form method="POST" action="{{ route('register.save') }}">
 
             @csrf
 
@@ -47,7 +47,6 @@
                 </span>
                 @enderror
             </div>
-
             <div class="mb-6">
                 <label for="password" class="text-gray-700 font-bold mb-2 block">{{ __('Mot de passe') }}</label>
                 <input type="password" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:ring-1 @error('password') border-red-500 @enderror" id="password" name="password" required autocomplete="new-password">

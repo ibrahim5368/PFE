@@ -8,6 +8,10 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class FormController extends Controller
 {
+    public function show (){
+        return view('layouts.sqladd');
+    }
+
     public function store(Request $request)
     {
         // Validate the incoming request data
